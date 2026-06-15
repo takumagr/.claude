@@ -1,0 +1,4 @@
+# Pinned to the versions validated on 2026-06-15 (CPU build).
+# For GPU, replace paddlepaddle with the matching paddlepaddle-gpu wheel.
+paddlepaddle==3.3.1
+paddleocr==3.7.0
