@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__codegraph__codegraph_explore",
+      "mcp__codegraph__codegraph_search",
+      "mcp__codegraph__codegraph_node",
+      "mcp__codegraph__codegraph_callers",
+      "mcp__codegraph__codegraph_callees",
+      "mcp__codegraph__codegraph_impact",
+      "mcp__codegraph__codegraph_files",
+      "mcp__codegraph__codegraph_status"
+    ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh -c 'command -v codegraph >/dev/null 2>&1 || npm i -g @colbymchenry/codegraph >/dev/null 2>&1; codegraph install -t claude -l global -y --no-permissions >/dev/null 2>&1 || true'"
+          }
+        ]
+      }
+    ]
+  }
+}
