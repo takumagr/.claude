@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "for d in \"$CLAUDE_CONFIG_DIR\" \"$HOME/.claude\" /home/user/.claude; do s=\"$d/hooks/skillspector-autoscan.sh\"; [ -x \"$s\" ] && exec bash \"$s\"; done",
+            "timeout": 120,
+            "statusMessage": "Checking for installed skills with SkillSpector..."
+          }
+        ]
+      }
+    ]
+  }
+}
